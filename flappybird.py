@@ -11,3 +11,16 @@ SCREEN=pygame.display.set_mode((SCREENWIDTH,SCREENHEIGHT))
 GROUNDY= SCREENHEIGHT*0.8
 GAME_SPRITES ={}
 GAME_SOUNDS={}
+PLAYER='/gallery/sprites/bird.png'
+BACKGROUND='/gallery/sprites/background.png'
+PIPE='/gallery/sprites/pipe.png'
+
+#Main Fucntions 
+if __name__=="__main__":
+    #here we are going to initialize the py game 
+    pygame.init()
+    FPSCLOCK=pygame.time.Clock()
+    pygame.display.set_caption("Flappy Bird Game")
+    GAME_SPRITES['numbers']=(
+        pygame.image.load('/gallery/sprites/0.png').convert_alpha
+    )
