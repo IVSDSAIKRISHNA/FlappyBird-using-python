@@ -22,5 +22,18 @@ if __name__=="__main__":
     FPSCLOCK=pygame.time.Clock()
     pygame.display.set_caption("Flappy Bird Game")
     GAME_SPRITES['numbers']=(
-        pygame.image.load('/gallery/sprites/0.png').convert_alpha
+        pygame.image.load('/gallery/sprites/0.png').convert_alpha(),
+       pygame.image.load('/gallery/sprites/1.png').convert_alpha(),
+       pygame.image.load('/gallery/sprites/2.png').convert_alpha(),
+       pygame.image.load('/gallery/sprites/3.png').convert_alpha(),
+       pygame.image.load('/gallery/sprites/4.png').convert_alpha(),
+
+       pygame.image.load('/gallery/sprites/5.png').convert_alpha(),
+
+       pygame.image.load('/gallery/sprites/6.png').convert_alpha(),
+       pygame.image.load('/gallery/sprites/7.png').convert_alpha(),
+       pygame.image.load('/gallery/sprites/8.png').convert_alpha(),
+       pygame.image.load('/gallery/sprites/9.png').convert_alpha(),
+
+
     )
