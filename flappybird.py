@@ -37,3 +37,4 @@ if __name__=="__main__":
 
 
     )
+GAME_SPRITES['message']=pygame.image.load('/gallery/aprites/message.png').convert_alpha(),
