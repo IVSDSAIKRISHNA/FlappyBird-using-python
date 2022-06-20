@@ -28,7 +28,7 @@ if __name__=="__main__":
        pygame.image.load('/gallery/sprites/3.png').convert_alpha(),
        pygame.image.load('/gallery/sprites/4.png').convert_alpha(),
 
-       pygame.image.load('/gallery/sprites/5.png').convert_alpha()
+       pygame.image.load('/gallery/sprites/5.png').convert_alpha(),
 
        pygame.image.load('/gallery/sprites/6.png').convert_alpha(),
        pygame.image.load('/gallery/sprites/7.png').convert_alpha(),
