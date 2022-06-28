@@ -17,7 +17,13 @@ PIPE='gallery/sprites/pipe.png'
 def welcomeScreen():
     """ Shows Welcome Screen """
     playrx=int(SCREENWIDTH/5)
-    playery=int(SCREENHEIGHT-GAME_SPRITES['player'].get_height())
+    playery=int(SCREENHEIGHT-GAME_SPRITES['player'].get_height())/2
+    messagex=int(SCREENWIDTH-GAME_SPRITES['message'].get_width())/2
+    messagey=int(SCREENHEIGHT*0.13)
+    basex=0 
+    while True:
+        for event in pygame.event.get():
+            pass
     pass
 #Main Fucntions 
 if __name__=="__main__":
