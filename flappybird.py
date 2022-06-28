@@ -14,7 +14,9 @@ GAME_SOUNDS={}
 PLAYER='gallery/sprites/bird.png'
 BACKGROUND='gallery/sprites/background.png'
 PIPE='gallery/sprites/pipe.png'
-
+def welcomeScreen():
+    """ Shows welcome screen """
+    pass
 #Main Fucntions 
 if __name__=="__main__":
     #here we are going to initialize the py game 
