@@ -56,3 +56,4 @@ GAME_SPRITES['background']=pygame.image.load(BACKGROUND).convert()
 GAME_SPRITES['player']=pygame.image.load(PLAYER).convert()
 while True:
     welcomeScreen() # this is my welcome screen 
+    mainGame() # this is my main game function 
