@@ -15,7 +15,7 @@ PLAYER='gallery/sprites/bird.png'
 BACKGROUND='gallery/sprites/background.png'
 PIPE='gallery/sprites/pipe.png'
 def welcomeScreen():
-    """ Shows welcome screen """
+    """ Shows Welcome Screen """
     pass
 #Main Fucntions 
 if __name__=="__main__":
