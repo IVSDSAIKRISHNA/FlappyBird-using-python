@@ -37,10 +37,16 @@ if __name__=="__main__":
 
 
     )
-GAME_SPRITES['message']=pygame.image.load('/gallery/aprites/message.png').convert_alpha()
-GAME_SPRITES['base']=pygame.image.load('/gallery/aprites/message.png').convert_alpha()
+GAME_SPRITES['message']=pygame.image.load('/gallery/sprites/message.png').convert_alpha()
+GAME_SPRITES['base']=pygame.image.load('/gallery/sprites/message.png').convert_alpha()
 #dealing with the angles and the position of the pipes that are getting rendered
 GAME_SPRITES['pipe']=(
     pygame.transform.rotate(pygame.image.load(PIPE).convert_alpha(),180),
     pygame.image.load(PIPE).convert_alpha()
 )
+ # Game Sounds
+GAME_SOUNDS['die']=pygame.mixer.Sound("/gallery/audio/die.wav")
+GAME_SOUNDS['hit']=pygame.mixer.Sound("/gallery/audio/hit.wav")
+GAME_SOUNDS['point']=pygame.mixer.Sound("/gallery/audio/point.wav")
+GAME_SOUNDS['swoosh']=pygame.mixer.Sound("/gallery/audio/swoosh.wav")
+GAME_SOUNDS['wing']=pygame.mixer.Sound("/gallery/audio/wing.wav")
