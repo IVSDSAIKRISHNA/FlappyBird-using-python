@@ -16,6 +16,8 @@ BACKGROUND='gallery/sprites/background.png'
 PIPE='gallery/sprites/pipe.png'
 def welcomeScreen():
     """ Shows Welcome Screen """
+    playrx=int(SCREENWIDTH/5)
+    playery=int(SCREENHEIGHT-GAME_SPRITES['player'].get_height())
     pass
 #Main Fucntions 
 if __name__=="__main__":
