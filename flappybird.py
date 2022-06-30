@@ -37,7 +37,18 @@ def welcomeScreen():
                 SCREEN.blit(GAME_SPRITES['base'],(basex,GROUNDY ))  
                 pygame.display.update()
                 FPSCLOCK.tick(FPS)      
-    
+def mainGame():
+    score =0
+    playerx= int(SCREENWIDTH/5)
+    playery = int(SCREENWIDTH/2)
+    basex=0
+
+    # Create2 pipes for blitting on the screen
+    newPipe1= getRandomPipe()
+    newPipe2= getRandomPipe()
+        
+
+
 #Main Fucntions 
 if __name__=="__main__":
     #here we are going to initialize the py game 
@@ -61,7 +72,7 @@ if __name__=="__main__":
 
     )
 GAME_SPRITES['message']=pygame.image.load('gallery/sprites/message.png').convert_alpha()
-GAME_SPRITES['base']=pygame.image.load('gallery/sprites/message.png').convert_alpha()
+GAME_SPRITES['base']=pygame.image.load('gallery/sprites/base.png').convert_alpha()
 #dealing with the angles and the position of the pipes that are getting rendered
 GAME_SPRITES['pipe']=(
     pygame.transform.rotate(pygame.image.load(PIPE).convert_alpha(),180),
