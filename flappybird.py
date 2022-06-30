@@ -48,7 +48,10 @@ def mainGame():
     newPipe2= getRandomPipe()
     
 def getRandomPipe():
-    pass     
+    """
+    Generate posiitons of two pipes ( one bottom straight and one top rotated ) for blitting on the screen """ 
+    pipeHeight= GAME_SPRITES['pipe'][0].get_height()
+    offset = SCREENHEIGHT/3
 
 
 #Main Fucntions 
