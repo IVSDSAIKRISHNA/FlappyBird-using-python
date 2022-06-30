@@ -46,7 +46,9 @@ def mainGame():
     # Create2 pipes for blitting on the screen
     newPipe1= getRandomPipe()
     newPipe2= getRandomPipe()
-        
+    
+def getRandomPipe():
+    pass     
 
 
 #Main Fucntions 
