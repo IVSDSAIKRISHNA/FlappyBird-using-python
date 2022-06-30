@@ -32,11 +32,11 @@ def welcomeScreen():
                 return
             else:
                 SCREEN.blit(GAME_SPRITES['background'],(0,0 ))
-                SCREEN.blit(GAME_SPRITES['player'],(playerx, playery ))  
-                SCREEN.blit(GAME_SPRITES['background'],(0,0 ))  
-                SCREEN.blit(GAME_SPRITES['background'],(0,0 ))  
-                SCREEN.blit(GAME_SPRITES['background'],(0,0 ))  
-                SCREEN.blit(GAME_SPRITES['background'],(0,0 ))       
+                SCREEN.blit(GAME_SPRITES['player'],( playrx, playery ))  
+                SCREEN.blit(GAME_SPRITES['message'],(messagex,messagey ))  
+                SCREEN.blit(GAME_SPRITES['base'],(basex,GROUNDY ))  
+                pygame.display.update()
+                FPSCLOCK.tick(FPS)      
     
 #Main Fucntions 
 if __name__=="__main__":
