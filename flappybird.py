@@ -32,7 +32,7 @@ def welcomeScreen():
                 return
             else:
                 SCREEN.blit(GAME_SPRITES['background'],(0,0 ))
-                SCREEN.blit(GAME_SPRITES['background'],(0,0 ))  
+                SCREEN.blit(GAME_SPRITES['player'],(playerx, playery ))  
                 SCREEN.blit(GAME_SPRITES['background'],(0,0 ))  
                 SCREEN.blit(GAME_SPRITES['background'],(0,0 ))  
                 SCREEN.blit(GAME_SPRITES['background'],(0,0 ))  
