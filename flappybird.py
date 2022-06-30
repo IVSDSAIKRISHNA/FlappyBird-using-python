@@ -23,8 +23,21 @@ def welcomeScreen():
     basex=0 
     while True:
         for event in pygame.event.get():
-            pass
-    pass
+            #if the user clicks on the cross button, close the game 
+            if event.type==QUIT or (event.type==KEYDOWN and event.key == K_ESCAPE):
+                pygame.quit()
+                sys.exit()
+            # if user presses space or up key, start the game for them 
+            elif event.type==KEYDOWN and (event.key==K_SPACE or event.key == K_UP):
+                return
+            else:
+                SCREEN.blit(GAME_SPRITES['background'],(0,0 ))
+                SCREEN.blit(GAME_SPRITES['background'],(0,0 ))  
+                SCREEN.blit(GAME_SPRITES['background'],(0,0 ))  
+                SCREEN.blit(GAME_SPRITES['background'],(0,0 ))  
+                SCREEN.blit(GAME_SPRITES['background'],(0,0 ))  
+                SCREEN.blit(GAME_SPRITES['background'],(0,0 ))       
+    
 #Main Fucntions 
 if __name__=="__main__":
     #here we are going to initialize the py game 
