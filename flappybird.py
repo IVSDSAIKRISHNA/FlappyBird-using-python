@@ -1,6 +1,7 @@
 import imp
 import random
 import sys
+from turtle import Screen
 import pygame
 from pygame.locals  import *
 
@@ -97,7 +98,41 @@ def mainGame():
             playerFlapped=False
         playerHeight = GAME_SPRITES['player'].get_height()
         playery=playery+min(playerVelY,GROUNDY-playery-playerHeight)
-                                      
+
+
+        # moving the pipes to the left side 
+        for upperPipe , lowerPipe in zip(upperPipes,lowerPipes):
+            upperPipe['x'] += pipeVelX
+            lowerPipe['x'] +=pipeVelX
+
+         # add a new pipe when the first pipe is going out of the screen 
+        if 0<upperPipes[0]['x'] <5:
+            newpipe= getRandomPipe()
+            upperPipes.append(newpipe[0])
+            lowerPipes.append(newpipe[1])
+
+        # if the pipe is out of the screen ,we are going to remove it
+        if upperPipes[0]['x']<- GAME_SPRITES['pipe'].get_width():
+            upperPipes.pop(0)
+            lowerPipes.pop(0)  
+        # here we are blitting our sprites 
+        SCREEN.blit(GAME_SPRITES['background'],(0,0))
+        for upperPipe, lowerPipe in zip(upperPipes,lowerPipes):
+            SCREEN.blit(GAME_SPRITES['pipe'][0],(upperPipe['x'],upperPipe['y']))
+            SCREEN.blit(GAME_SPRITES['pipe'][0],(lowerPipe['x'],lowerPipe['y']))
+            
+        SCREEN.blit(GAME_SPRITES['base'],(basex,GROUNDY))
+        SCREEN.blit(GAME_SPRITES['player'],(playerx,playery)) 
+        myDigits=[int(x) for x in List(str(score))]
+        width = 0 
+        for digits in myDigits:
+            width+=GAME_SPRITES['numbers'][digits].get_width()
+        Xoffset=(SCREENWIDTH- width )/2
+
+
+       for digit in myDigits:
+        SCREEN.blit(GAME_SPRITES[''])           
+
 
     
                 
