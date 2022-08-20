@@ -46,7 +46,44 @@ def mainGame():
     # Create2 pipes for blitting on the screen
     newPipe1= getRandomPipe()
     newPipe2= getRandomPipe()
+    # list of upper pipes
+    upperPipes =[
+        {'x':SCREENWIDTH+200 , 'y':newPipe1[0]['y']},
+        {'x':SCREENWIDTH+200+(SCREENWIDTH/2) , 'y':newPipe1[1]['y']},
+    ]
+    #list of lower pipes
+    lowerPipes=[
+        {'x':SCREENWIDTH+200 , 'y':newPipe1[0]['y']},
+        {'x':SCREENWIDTH+200+(SCREENWIDTH/2) , 'y':newPipe1[1]['y']},
+    ]
+
+    #pipe velocity 
+    pipeVelX= -4
+    playerVelY=-9
+    playerMinVelY=-8
+    playerMaxVelY=10
+    playerAccY=1
+    #velocity while flapping 
+    playerFlapAccv=-8 
+    playerFlapped=False # true only when its flapping 
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == QUIT or (event.type == KEYDOWN and event.key==K_ESCAPE):
+                pygame.quit()
+                sys.exit()
+            if event.type ==KEYDOWN and (event.key == K_SPACE or event.key==K_UP):
+                   pass  
     
+                
+
+                
+
+
+
+
+
+
 def getRandomPipe():
     """
     Generate posiitons of two pipes ( one bottom straight and one top rotated ) for blitting on the screen """ 
