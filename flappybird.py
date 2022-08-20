@@ -130,8 +130,8 @@ def mainGame():
         Xoffset=(SCREENWIDTH- width )/2
 
 
-       for digit in myDigits:
-        SCREEN.blit(GAME_SPRITES[''])           
+        for digit in myDigits:
+            SCREEN.blit(GAME_SPRITES[''])           
 
 
     
