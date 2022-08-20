@@ -123,7 +123,7 @@ def mainGame():
             
         SCREEN.blit(GAME_SPRITES['base'],(basex,GROUNDY))
         SCREEN.blit(GAME_SPRITES['player'],(playerx,playery)) 
-        myDigits=[int(x) for x in List(str(score))]
+        myDigits=[int(x) for x in list(str(score))]
         width = 0 
         for digits in myDigits:
             width+=GAME_SPRITES['numbers'][digits].get_width()
@@ -131,7 +131,12 @@ def mainGame():
 
 
         for digit in myDigits:
-            SCREEN.blit(GAME_SPRITES[''])           
+            SCREEN.blit(GAME_SPRITES['numbers'][digit],(Xoffset,SCREENHEIGHT*0.12))
+            Xoffset+=GAME_SPRITES['numbers'][digit].get_width()
+        pygame.display.update()
+        FPSCLOCK.tick(FPS)    
+def isCollide(playerx,playery,upperPipes,Lowerpipes):
+    return False                   
 
 
     
