@@ -73,7 +73,22 @@ def mainGame():
                 pygame.quit()
                 sys.exit()
             if event.type ==KEYDOWN and (event.key == K_SPACE or event.key==K_UP):
-                   pass  
+                   if playery>0: #player is in the screen
+                    playerVelY = playerFlapAccv
+                    playerFlapped= True
+                    GAME_SOUNDS['wing'].play()
+        crashTest= isCollide(playerx,playery,upperPipes,lowerPipes) # does a crash test based on the given parameters
+        # player is crashed 
+        if crashTest:
+            return
+        # we are checking for the scrore and updating it and even printing 
+        playerMidPos= playerx + GAME_SPRITES['player'].get_width()/2
+        for pipe in upperPipes:
+            pipeMidPos=pipe['x'] + GAME_SPRITES['pipe'][0].get_width()/2
+            if pipeMidPos<=playerMidPos < pipeMidPos+4:
+                score+=1
+                print(f"Your score is {score}")                
+
     
                 
 
