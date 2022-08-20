@@ -87,7 +87,17 @@ def mainGame():
             pipeMidPos=pipe['x'] + GAME_SPRITES['pipe'][0].get_width()/2
             if pipeMidPos<=playerMidPos < pipeMidPos+4:
                 score+=1
-                print(f"Your score is {score}")                
+                print(f"Your score is {score}")
+            GAME_SOUNDS['point'].play()
+
+        #increasing the velocity
+        if playerVelY< playerMaxVelY and not playerFlapped:
+            playerVelY +=playerAccY
+        if playerFlapped:
+            playerFlapped=False
+        playerHeight = GAME_SPRITES['player'].get_height()
+        playery=playery+min(playerVelY,GROUNDY-playery-playerHeight)
+                                      
 
     
                 
