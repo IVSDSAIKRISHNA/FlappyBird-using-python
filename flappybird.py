@@ -3,7 +3,7 @@ import sys
 import pygame
 from pygame.locals import * 
 
-# Global Variables for the game
+
 # Here we are setting the difficulty level from the user input 
 k=int(input("Enter the difficulty rate out of 100 "))
 FPS=k
@@ -30,12 +30,12 @@ def welcomeScreen():
     basex = 0
     while True:
         for event in pygame.event.get():
-            # if user clicks on cross button, close the game
+            # logic for closing the game 
             if event.type == QUIT or (event.type==KEYDOWN and event.key == K_ESCAPE):
                 pygame.quit()
                 sys.exit()
 
-            # If the user presses space or up key, start the game for them
+            # logic for starting the game 
             elif event.type==KEYDOWN and (event.key==K_SPACE or event.key == K_UP):
                 return
             else:
@@ -52,7 +52,7 @@ def mainGame():
     playery = int(SCREENWIDTH/2)
     basex = 0
 
-    # Create 2 pipes for blitting on the screen
+    # Create 2 pipes 
     newPipe1 = getRandomPipe()
     newPipe2 = getRandomPipe()
 
