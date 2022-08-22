@@ -50,12 +50,12 @@ def mainGame():
     # list of upper pipes
     upperPipes =[
         {'x':SCREENWIDTH+200 , 'y':newPipe1[0]['y']},
-        {'x':SCREENWIDTH+200+(SCREENWIDTH/2) , 'y':newPipe1[1]['y']},
+        {'x':SCREENWIDTH+200+(SCREENWIDTH/2) , 'y':newPipe1[0]['y']},
     ]
     #list of lower pipes
     lowerPipes=[
         {'x':SCREENWIDTH+200 , 'y':newPipe1[0]['y']},
-        {'x':SCREENWIDTH+200+(SCREENWIDTH/2) , 'y':newPipe1[1]['y']},
+        {'x':SCREENWIDTH+200+(SCREENWIDTH/2) , 'y':newPipe1[0]['y']},
     ]
 
     #pipe velocity 
@@ -89,7 +89,7 @@ def mainGame():
             if pipeMidPos<=playerMidPos < pipeMidPos+4:
                 score+=1
                 print(f"Your score is {score}")
-            GAME_SOUNDS['point'].play()
+                GAME_SOUNDS['point'].play()
 
         #increasing the velocity
         if playerVelY< playerMaxVelY and not playerFlapped:
