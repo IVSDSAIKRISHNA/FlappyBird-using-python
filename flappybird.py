@@ -4,7 +4,10 @@ import pygame
 from pygame.locals import * 
 
 # Global Variables for the game
-FPS = 40
+# Here we are setting the difficulty level from the user input 
+k=int(input("Enter the difficulty rate out of 100 "))
+FPS=k
+
 SCREENWIDTH = 289
 SCREENHEIGHT = 511
 SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
@@ -184,14 +187,13 @@ def getRandomPipe():
 
 
 if __name__ == "__main__":
-    k=int(input("Enter the difficulty rate out of 100 "))
-    FPS=k
+    
     # here we are initializing the game 
     pygame.init() 
     FPSCLOCK = pygame.time.Clock()
 
 
-    pygame.display.set_caption('Flappy Bird by CodeWithHarry')
+    pygame.display.set_caption('Flappy Bird ')
     GAME_SPRITES['numbers'] = ( 
         pygame.image.load('gallery/sprites/0.png').convert_alpha(),
         pygame.image.load('gallery/sprites/1.png').convert_alpha(),
