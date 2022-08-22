@@ -184,8 +184,10 @@ def getRandomPipe():
 
 
 if __name__ == "__main__":
-    # This will be the main point from where our game will start
-    pygame.init() # Initialize all pygame's modules
+    k=int(input("Enter the difficulty rate out of 100 "))
+    FPS=k
+    # here we are initializing the game 
+    pygame.init() 
     FPSCLOCK = pygame.time.Clock()
 
 
