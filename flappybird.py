@@ -112,7 +112,7 @@ def mainGame():
             lowerPipes.append(newpipe[1])
 
         # if the pipe is out of the screen ,we are going to remove it
-        if upperPipes[0]['x']<- GAME_SPRITES['pipe'].get_width():
+        if upperPipes[0]['x'] < -GAME_SPRITES['pipe'][0].get_width():
             upperPipes.pop(0)
             lowerPipes.pop(0)  
         # here we are blitting our sprites 
